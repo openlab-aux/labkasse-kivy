@@ -1,0 +1,35 @@
+#:kivy 1.4
+
+[H1@Label]:
+    text: ctx.text if hasattr(ctx, 'text') else ''
+    font_size: self.height * 0.5
+    markup: True
+
+[H2@Label]:
+    text: ctx.text if hasattr(ctx, 'text') else ''
+    font_size: self.height * 0.2
+    markup: True
+
+
+<WelcomeScreen>:
+    orientation: 'vertical'
+
+    padding: 20
+    spacing: 20
+
+    H1:
+        text: 'LAB-KASSE'
+
+    Image:
+        source: 'img/openlab-emblem.png'
+
+
+    H2:
+        text: 'scanne einen code'
+        size_hint: None, None
+
+
+    Image:
+        size_hint: None, None
+        source: 'img/barcode.png'
+
